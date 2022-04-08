@@ -1,0 +1,34 @@
+
+<h1>My Blogs</h1>
+
+{{#each blogs as |blog|}}
+<a href="/edit/{{id}}">
+<div class="row justify-content-md-center">
+      <div class="card col-md-8">
+        <div class="card-header"style="
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    ">
+          <h4>{{title}}</h4>
+          <h6>{{format_date date_created}}</h6>
+        </div>
+        
+        <div class="card-body">
+          
+          <p class="card-text">{{description}}</p>
+          
+        </div>
+      </div>
+    </div>
+    </a>
+{{/each}}  
+
+<div class="row justify-content-md-center">
+<div class="card col-md-8 new-post-button">
+<a class="btn btn-primary" href="/newBlog" role="button">Add new Post</a>
+</div>
+</div>
+
+<script src="js/addComment.js"></script>

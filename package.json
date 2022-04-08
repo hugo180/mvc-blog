@@ -1,0 +1,20 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": " Model-View-Controller (MVC): Tech Blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  
+  "keywords": [
+    "tech-blog",
+    "MVC",
+    "MySql",
+    "node",
+    "seed"
+  ]
+  
+}

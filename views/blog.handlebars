@@ -1,0 +1,61 @@
+
+
+<div class="row justify-content-md-center">
+    <div class="card col-md-8" style="padding:0px;">
+        <div class="card-header"style="
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 1px solid black;
+        background-color: aqua;
+        
+    ">
+          <h4>{{blog.title}}</h4>
+          <h6>{{format_date blog.date_created}}</h6>
+        </div>
+        
+        <div class="card-body">
+          
+          <p class="card-text">{{blog.description}}</p>
+          
+        </div>
+      </div>
+</div>
+
+
+
+{{#each comments as |comment|}}
+<div class="row justify-content-md-center">
+      <div class="card col-md-8" style="margin:4px; padding:0px">
+        <div class="card-header"style="
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    ">
+        </div>
+        
+        <div class="card-body">
+          
+          <p class="card-text">{{content}}</p>
+          <p class="card-text">~{{comment.user.name}}</p>
+          
+        </div>
+      </div>
+    </div>
+{{/each}}
+ <div class="row justify-content-md-center">
+    <div class="card col-md-8">
+    <form class ="comment-form">
+
+      <div class="form-group">
+        <label for="comment">Add comment</label>
+        <input type="text" class="form-control" id="comment" placeholder="Be honest!!">
+      </div>
+      <button type="submit" class="btn btn-primary" id="comment-submit">Post comment</button>
+    </form>
+    </div>
+    </div>
+
+<script src="../js/addComment.js"></script>
